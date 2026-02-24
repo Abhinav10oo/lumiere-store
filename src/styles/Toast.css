@@ -1,0 +1,38 @@
+.toast {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  z-index: 999;
+  animation: slideIn 0.3s ease;
+}
+
+.toast p {
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.toast button {
+  background: none;
+  border: none;
+  color: var(--bg-primary);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
